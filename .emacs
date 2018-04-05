@@ -35,9 +35,33 @@
 ;;(setenv "HOME" "D:/Emacs")
 ;;(setenv "PATH" "D:/Emacs")
 
+;;设置ctags的目录,设置Emacs的c源代码目录
+;; check OS type
+(cond
+ ((string-equal system-type "windows-nt") ; Microsoft Windows
+  (setq path-to-ctags "D:/Vim/vim80/ctags.exe")
+  (setq source-directory "D:/Emacs/")
+  (progn
+    (message "Microsoft Windows")))
+ ((string-equal system-type "darwin") ; Mac OS X
+  (progn
+    (message "Mac OS X")))
+ ((string-equal system-type "gnu/linux") ; linux
+  (setq path-to-ctags "/usr/bin/ctags")
+  (setq source-directory "/root/GitHub/emacs/")
+  (progn
+    (message "Linux"))))
+
+(defun create-tags (dir-name)
+  "Create tags file."
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "%s -f TAGS -e -R %s" path-to-ctags (directory-file-name dir-name)))
+)
+
 ;;设置Emacs的c源代码目录
 ;;(setq source-directory "D:/Emacs/")
-;;(setq source-directory "/root/GitHub/emacs/")
+(setq source-directory "/root/GitHub/emacs/")
 ;;(setq todo-file-do "D:/Todo/do")
 ;;(setq todo-file-done "D:/Todo/done")
 ;;(setq todo-file-top "D:/Todo/top")
@@ -262,7 +286,7 @@
       ))
 
 ;;插件目录
-;;(add-to-list 'load-path' "~/.emacs.d/plugin")
+(add-to-list 'load-path' "~/.emacs.d/plugin")
 ;;(add-to-list 'load-path' "D:/Emacs/.emacs.d/plugin")
 
 
