@@ -68,6 +68,8 @@
 
 ;;显示行号列号
 (column-number-mode t)
+;;设置C-x O回到原来窗口
+(global-set-key (kbd "C-x O") 'previous-multiframe-window)
 ;;设置标记点
 ;;(global-set-key (kbd "M-SPC") 'set-mark-command)
 ;;(global-set-key (kbd "M-m") 'set-mark-command)
