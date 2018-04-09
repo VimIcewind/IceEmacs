@@ -82,6 +82,7 @@
 (setq show-paren-style 'parentheses)
 
 ;;不产生备份文件
+(setq auto-save-default nil)
 (setq make-backup-files nil)
 ;;不产生临时文件
 (setq-default make-backup-files nil)
