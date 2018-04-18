@@ -11,13 +11,13 @@
 	 ;;(top . 166)
 	 ;;(left . 623)
 	 (width . 80)
-	 (height . 37)
+	 (height . 38)
 	 (background-color . "black")
 	 (foreground-color . "grey")
 	 (cursor-color     . "gold1")
 	 (mouse-color      . "gold1")
 	 (tool-bar-lines . 0)
-	 (menu-bar-lines . 1)
+	 (menu-bar-lines . 0)
 	 (right-fringe)
 	 (left-fringe)))
 
@@ -27,8 +27,12 @@
 ;;改变Emacs固执的要你回答yes的行为。按y或空格键表示yes，n表示no。
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;;插件目录
+(add-to-list 'load-path' "~/.emacs.d/plugin")
+;;(add-to-list 'load-path' "D:/Emacs/.emacs.d/plugin")
+
 ;;菜单栏
-(menu-bar-mode t)
+;;(menu-bar-mode t)
 ;;工具栏
 (tool-bar-mode -1)
 
@@ -287,10 +291,6 @@
       (global-set-key (kbd "C-0") 'default-font-size)  ;Ctrl+0
       (global-set-key (kbd "C-=") 'increase-font-size) ;Ctrl+=
       ))
-
-;;插件目录
-(add-to-list 'load-path' "~/.emacs.d/plugin")
-;;(add-to-list 'load-path' "D:/Emacs/.emacs.d/plugin")
 
 
 ;;(add-to-list 'exec-path "D:/w3m")
