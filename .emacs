@@ -43,8 +43,8 @@
 ;; check OS type
 (cond
  ((string-equal system-type "windows-nt") ; Microsoft Windows
-  (setq path-to-ctags "D:/Vim/vim80/ctags.exe")
-  (setq source-directory "D:/Emacs/")
+  (setq path-to-ctags "D:/Vim/tools/ctags.exe")
+  (setq source-directory "E:/GitHub/emacs/")
   (progn
     (message "Microsoft Windows")))
  ((string-equal system-type "darwin") ; Mac OS X
@@ -96,7 +96,7 @@
 ;;定制C/C++的Linux缩进风格
 (add-hook 'c-mode-hook
 	  '(lambda()
-	     (c-set-style "k&r")
+	     (c-set-style "linux")
 	     (c-toggle-auto-state)
 	     (c-toggle-auto-hungry-state)
 	     ;;设置缩进字符数
