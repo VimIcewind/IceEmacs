@@ -97,7 +97,7 @@
 (add-hook 'c-mode-hook
 	  '(lambda()
 	     (c-set-style "linux")
-	     (c-toggle-auto-state)
+	     ;;(c-toggle-auto-state)
 	     (c-toggle-auto-hungry-state)
 	     ;;设置缩进字符数
 	     (setq c-basic-offset 4)
@@ -105,7 +105,7 @@
 (add-hook 'c++-mode-hook
 	  '(lambda()
 	     (c-set-style "stroustrup")
-	     (c-toggle-auto-state)
+	     ;;(c-toggle-auto-state)
 	     (c-toggle-auto-hungry-state)
 	     ;;设置缩进字符数
 	     (setq c-basic-offset 4)
