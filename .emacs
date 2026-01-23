@@ -113,10 +113,27 @@
 ;;换行后立即缩进
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+;; 配置默认的编码
+(set locale-coding-system 'utf-8-unix)
+(set-default-coding-systems 'utf-8-unix)
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(set-selection-coding-system 'utf-8-unix)
+;; 指定新建buffer的默认编码为utf-8-unix，换行符为unix的方式
+(setq-default buffer-file-coding-system 'utf-8-unix)
+;; win平台剪贴板需要用utf-16-le
+(when (eq system-type 'windows-nt)
+  (set-next-selection-coding-system 'utf-16-le)
+  (set-selection-coding-system 'utf-16-le)
+  (set-clipboard-coding-system 'utf-16-le))
+;; 编码侦测gbk utf-8
+(prefer-coding-system 'gbk)
+(prefer-coding-system 'utf-8-unix)
+
 ;;自动侦测文件编码gb2312或utf-8
-(if (equal current-language-environment "UTF-8")
-    (prefer-coding-system 'gb2312)
-  (prefer-coding-system 'utf-8))
+;;(if (equal current-language-environment "UTF-8")
+;;    (prefer-coding-system 'gb2312)
+;;  (prefer-coding-system 'utf-8))
 
 ;;(set-language-environment 'UTF-8)
 
