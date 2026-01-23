@@ -101,7 +101,7 @@
 	     (c-toggle-auto-hungry-state)
 	     ;;设置缩进字符数
 	     (setq c-basic-offset 4)
-	     (setq indent-tabs-mode nil)))
+	     (setq indent-tabs-mode t)))
 (add-hook 'c++-mode-hook
 	  '(lambda()
 	     (c-set-style "stroustrup")
