@@ -110,6 +110,14 @@
 	     ;;设置缩进字符数
 	     (setq c-basic-offset 4)
 	     (setq indent-tabs-mode nil)))
+(add-hook 'java-mode-hook
+	  '(lambda()
+	     ;;(c-set-style "java")
+	     ;;(c-toggle-auto-state)
+	     ;;(c-toggle-auto-hungry-state)
+	     ;;设置缩进字符数
+	     (setq c-basic-offset 4)
+	     (setq indent-tabs-mode nil)))
 ;;换行后立即缩进
 (global-set-key (kbd "RET") 'newline-and-indent)
 
