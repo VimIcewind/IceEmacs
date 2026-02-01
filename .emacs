@@ -65,7 +65,7 @@
 
 ;;设置Emacs的c源代码目录
 ;;(setq source-directory "D:/Emacs/")
-(setq source-directory "/root/GitHub/emacs/")
+;;(setq source-directory "/root/GitHub/emacs/")
 ;;(setq todo-file-do "D:/Todo/do")
 ;;(setq todo-file-done "D:/Todo/done")
 ;;(setq todo-file-top "D:/Todo/top")
@@ -100,7 +100,7 @@
 	     ;;(c-toggle-auto-state)
 	     (c-toggle-auto-hungry-state)
 	     ;;设置缩进字符数
-	     (setq c-basic-offset 4)
+	     (setq c-basic-offset 8)
 	     (setq indent-tabs-mode t)))
 (add-hook 'c++-mode-hook
 	  '(lambda()
@@ -140,8 +140,8 @@
 
 ;;自动侦测文件编码gb2312或utf-8
 ;;(if (equal current-language-environment "UTF-8")
-;;    (prefer-coding-system 'gb2312)
-;;  (prefer-coding-system 'utf-8))
+;;   (prefer-coding-system 'gb2312)
+;;   (prefer-coding-system 'utf-8))
 
 ;;(set-language-environment 'UTF-8)
 
